@@ -1,4 +1,4 @@
-# 🏗 Scaffold-ETH
+# 🏗 Basic $NIKHIL ERC20 Coin Marketplace
 
 > everything you need to build on Ethereum! 🚀
 

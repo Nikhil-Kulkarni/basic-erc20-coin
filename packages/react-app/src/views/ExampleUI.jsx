@@ -1,8 +1,9 @@
-import { SyncOutlined } from "@ant-design/icons";
-import { utils } from "ethers";
+import { Address, Balance } from "../components";
 import { Button, Card, DatePicker, Divider, Input, List, Progress, Slider, Spin, Switch } from "antd";
 import React, { useState } from "react";
-import { Address, Balance } from "../components";
+
+import { SyncOutlined } from "@ant-design/icons";
+import { utils } from "ethers";
 
 export default function ExampleUI({
   purpose,
@@ -161,9 +162,9 @@ export default function ExampleUI({
           dataSource={setPurposeEvents}
           renderItem={item => {
             return (
-              <List.Item key={item.blockNumber + "_" + item.sender + "_" + item.purpose}>
+              <List.Item key={item.blockNumber + "_" + item.purchaser + "_" + item.amount}>
                 <Address address={item[0]} ensProvider={mainnetProvider} fontSize={16} />
-                {item[1]}
+                {item[1]._hex}
               </List.Item>
             );
           }}
